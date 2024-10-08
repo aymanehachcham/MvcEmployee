@@ -1,0 +1,42 @@
+@model MvcEmployee.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Employee Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <!-- First Name -->
+        <dt>@Html.DisplayNameFor(model => model.FirstName)</dt>
+        <dd>@Html.DisplayFor(model => model.FirstName)</dd>
+        <!-- Last Name -->
+        <dt>@Html.DisplayNameFor(model => model.LastName)</dt>
+        <dd>@Html.DisplayFor(model => model.LastName)</dd>
+        <!-- Position -->
+        <dt>@Html.DisplayNameFor(model => model.Position)</dt>
+        <dd>@Html.DisplayFor(model => model.Position)</dd>
+        <!-- Department -->
+        <dt>@Html.DisplayNameFor(model => model.Department)</dt>
+        <dd>@Html.DisplayFor(model => model.Department)</dd>
+        <!-- Hire Date -->
+        <dt>@Html.DisplayNameFor(model => model.HireDate)</dt>
+        <dd>@Html.DisplayFor(model => model.HireDate.ToShortDateString())</dd>
+        <!-- Salary -->
+        <dt>@Html.DisplayNameFor(model => model.Salary)</dt>
+        <dd>@Html.DisplayFor(model => model.Salary)</dd>
+        <!-- Email -->
+        <dt>@Html.DisplayNameFor(model => model.Email)</dt>
+        <dd>@Html.DisplayFor(model => model.Email)</dd>
+        <!-- Phone -->
+        <dt>@Html.DisplayNameFor(model => model.Phone)</dt>
+        <dd>@Html.DisplayFor(model => model.Phone)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
